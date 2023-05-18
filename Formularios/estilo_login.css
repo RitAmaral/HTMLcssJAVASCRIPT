@@ -1,0 +1,88 @@
+
+html{
+    background-color: #eecceebd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /*relative to 1% of the height of the viewport, usado para redimencionar automaticamente quer seja um telemovel ou computador*/
+    margin: 0;
+}
+
+form{
+    background-color: #abc9f1;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #000000;
+    padding: 10px;
+}
+
+fieldset{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+label, input {
+    display:block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input{ /*este input sobrepõe o input anterior; exemplo: se tiver color red em cima, e color blue aqui, fica color blue*/
+    padding: 0.75em; /*Relative to the font-size of the element (2em means 2 times the size of the current font)*/
+    border-radius: 5px;
+    margin-bottom: 1.75em;
+    border: 1px solid #ffffff;
+    font-size: 0.85em;
+}
+
+label{
+    margin-bottom: 0.25em;
+}
+
+legend{
+    padding: 1em;
+    margin: 0px;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-weight: bold; /*fica a negrito*/
+    text-transform: uppercase; /*texto fica a letras maiúsculas*/
+}
+
+.actions{
+    display: flex; /*mete um botões lado a lado*/
+    gap: 2em; /*mete distância entre os 2 botões: enviar e limpar*/
+}
+
+.botao{
+    background-color: #e987e9bd;
+    color: #fff;
+    cursor: pointer; /*quando ponho o rato em cima do botão, aparece uma mão*/
+}
+
+.bt_limpar{
+    background-color: #d658a6d2;
+}
+
+.botao:hover{
+    background-color: #fc6ae8;
+}
+
+.botao:active{
+    background-color: #6180d4;
+}
+
+.bt_limpar:active{
+    background-color: #0037cf;
+}
+
+.bt_limpar:hover{
+    background-color: #db0b8c;
+}

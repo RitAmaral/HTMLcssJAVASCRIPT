@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de cliques</title>
+    <style>
+        html{
+            background-color: #d4f3f3;
+        }
+
+        button{
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #da5bd5b7;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Contador de Cliques</h1>
+
+    <button onclick="contar()">Clica aqui várias vezes</button>
+    <button onclick="zerar()">Limpar valores</button>
+
+    <section id="result">
+        <p>Já clicou 0 vezes</p>
+    </section>
+
+    <script>
+
+        var clicou = 0; //isto tem de estar fora, se estiver dentro, não volta a iniciar em 0.
+        function contar(){
+            clicou++ //isto é igual a clicou = clicou + 1
+            var result = document.querySelector('section#result') //nota, em vez de escrever isto 2x, posso colocar fora.
+            result.innerHTML = `Já clicou ${clicou} vezes`;
+        }
+        function zerar(){
+            var result = document.querySelector('section#result');
+            clicou = 0; //não pode ter var antes! se não, não limpa
+            result.innerHTML=`Já clicou 0 vezes`;
+        }
+
+    </script>
+
+</body>
+</html>

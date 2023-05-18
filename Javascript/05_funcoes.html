@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplos de funções</title>
+</head>
+
+    <script>
+        //Esta função chama-se somar, mas posso dar o nome que quiser:
+        function somar(n1,n2){ 
+            return n1+n2;
+        }
+
+        var soma = somar(10,20);
+        console.log('O resultado é', soma); //isto não aparece na página html, aparece em inspecionar e depois console.
+
+        somar.texto='isto é uma propriedade';
+        console.log(somar.texto); 
+
+        console.log('--------------------');
+
+        /*------------------------------Exemplo funções--------------------------*/
+
+        var x = 20;
+        var y;
+        function mostraXY(){
+            var x = 50; //se tirarmos o var das variáveis daqui, os valores que apareceriam fora da função seriam 50 e 10.
+            var y = 10;
+            console.log('O valor de x dentro da função é', x); //Output = O valor de x é 50
+            console.log('O valor de y dentro da função é', y);
+        }
+
+        mostraXY(); //Chamamos a função (fora da função).
+        /* Output = O valor de x dentro da função é 50
+        O valor de y dentro da função é 10.*/
+
+        console.log('O valor de x fora da função é', x); //Output = O valor de x fora da função é 20
+        console.log('O valor de y fora da função é', y); //Output = O valor de y fora da função é undefined
+        //Isto acontece porque o console.log está fora da function, por isso vai buscar os valores em cima.
+
+
+        /*---------------------IIFE - Immediately invoked function expression------------*/
+        //vamos ver muito isto nos códigos javascript
+        //é uma função que corre no momento em que é invocada no loop javascript
+
+        (function(){
+
+            function somar(){ //não vamos pôr nenhum parametro dentro de parentesis, fica vazio
+                console.log(arguments);
+                var resultado = 0; //variável que guarda o resultado
+                var x = 0; //argumentos começam em zero
+
+                while(typeof arguments[x]==='number'){ //ciclo enquanto: enquanto houver argumentos fazer:
+                    resultado += arguments[x];
+                    x++ //isto é o mesmo que colocar x=x+1;
+                }
+                console.log('O resultado da soma é', resultado); //Output = O resultado é 75
+            }
+
+            somar(10,0,15,20); //o javascript entende o 0 como falso, por isso se colocarmos um zero em vez de 30, o resultado é 10.
+            //para evitar que o javascript entenda o 0 como falso, colocamos no while: typeof arguments[x]==='number' 
+            //assim o Output é: O resultado é 45
+        
+
+            function media(){ 
+                console.log(arguments);
+                var resultado = 0; 
+                var x = 0; 
+
+                while(typeof arguments[x]==='number'){ 
+                    resultado += arguments[x];
+                    x++ //isto é o mesmo que colocar x=x+1;
+                }
+                console.log('O resultado da média é', resultado/x);
+                console.log('O número de argumentos é',arguments.length); //length = tamanho dos argumentos
+            }
+
+            media(10,20,30,40); //Output do console.log = O resul. da media é 25; O nº de argumentos é 4
+            media(10,10,10); //Output do console.log = O resul. é 10; O nº de argumentos é 3
+            media(1,2,3,4,5,6,7,8,9); //Output do console.log = O resul. é 10; O nº de argumentos é 9
+
+        })();
+
+    </script>
+
+<body>
+    
+    <h1>Funções em HTML</h1>
+
+</body>
+</html>

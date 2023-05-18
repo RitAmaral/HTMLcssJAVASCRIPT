@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onclick</title>
+
+    <style>
+        body{
+            font: 12pt arial;
+        }
+
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Evento on click</h1>
+    
+    <button onclick="clicar()">Clique aqui</button>
+    <script>
+        function clicar(){
+            window.alert ('Acabou de clicar no botão'); //window é como um alert, abre uma janelinha que diz: acabou de clicar no botão
+        }
+    </script>
+
+
+    <button ondblclick="clicar2()">Clique aqui</button> 
+    <script>
+        function clicar2(){
+            window.alert ('Acabou de clicar 2x no botão');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt - Trabalhar com dados</title>
+
+    <style>
+        body{
+            font: 12pt arial;
+        }
+
+        button{
+            font-size: 12pt;
+            padding: 30px;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+
+    <h1>Prompt - Trabalhar com dados</h1>
+
+    <button onclick="clicar()">Clique aqui</button>
+    <script>
+        function clicar(){
+            var nome = window.prompt('Qual o seu nome?'); //aparece uma janela onde pede para escrevermos o nome
+            //window.alert ('Olá ' + nome + '. Seja bem vinda.');
+            //outra forma:
+            window.alert (`Olá ${nome}. Seja bem-vinda.`); 
+        }
+    </script>
+    
+</body>
+</html>

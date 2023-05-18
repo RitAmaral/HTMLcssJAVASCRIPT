@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Soma dois números</title>
+</head>
+<body>
+    
+    <h1>Soma dois números vindos de um prompt</h1> <!--prompt=caixa de texto para input-->
+
+    <button onclick="somar()"> Soma dois números </button>
+
+    <p id="result">O resultado vai aparecer aqui</p> <!--o resultado aparece aqui pq colocamos o id-->
+    <!--o id é único, mas se colocarmos em tipos diferentes, por exemplo h1#results, funciona o msm id-->
+    <p>E não vai aparecer aqui</p>
+
+    <script>
+
+        function somar(){
+            var n1=Number(window.prompt('Digite o primeiro número: '));
+            var n2=Number(window.prompt('Digite o segundo número: '));
+
+            soma = n1+n2;
+            var result = document.querySelector('p#result');
+            result.innerHTML = (`O resultado da soma de <b>${n1}</b> mais <b>${n2}</b> é <b><mark>${soma}</mark></b>`);
+
+            //console.log('A soma é: ',soma);
+        }
+
+    </script>
+
+</body>
+</html>

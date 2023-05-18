@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Links - Pseudoclasses</title>
+    
+    <style>
+        body, h2{ /*posso colocar os elementos todos aqui que tenham o mesmo formato*/
+            font-family: sans-serif;
+        }
+        h1{ 
+            background-color: #f56c6c71;
+        }
+        a{
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none; /*deixou de aparecer a linha underline em baixo do texto*/
+        }
+        a:link{
+            color: red; /*cor do link antes de o abrir*/
+        }
+        a:visited{
+            color: rgb(13, 158, 13); /*cor do link depois de o abrir*/
+        }
+        a:hover{
+            color:pink; /*se passar o rato por cima do link, fica rosa*/
+        }
+        a:active{
+            color: black; /*quando clicar no link aparece a preto*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo Classes</h1>
+    <p>Isto é um parágrafo</p>
+
+    <p><a href="03_width_height.html" target="_blank">Exemplo Width & Height</a>
+    </p>
+    <p><a href="05_border.html" target="_blank">Exemplo Border</a>
+    </p>
+    <p><a href="08_display.html" target="_blank">Exemplo Display</a>
+    </p>
+
+
+
+</body>
+</html>

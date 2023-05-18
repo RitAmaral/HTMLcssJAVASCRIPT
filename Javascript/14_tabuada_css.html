@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+        
+        html{
+            font-family: 'Sacramento', cursive;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            margin: 20px;
+            background-image: url(imagens/board.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        h1{
+            font-size: 40px;
+            border-bottom: 2px solid blanchedalmond;
+            width:fit-content;
+            color:blanchedalmond;
+            margin:auto; /*para colocar no centro*/
+            text-shadow: 2px 2px 5px blanchedalmond;
+        }
+
+        form{
+            padding: 8px;
+            border-radius: 0px 10px 0px 10px;
+            border: 2px solid blanchedalmond;
+            width: fit-content;
+            margin: auto;
+            background-color: #ffffff63;
+            font-size: 1.5em;
+        }
+
+        :focus{ /*qnd fizer refresh, fica o focus no input do formulario*/
+            background-color: blanchedalmond;
+        }
+
+        .botao_sub{
+            background-color: blanchedalmond;
+            border-radius: 5px;
+            border-color: #008080;
+            cursor: pointer;
+        }
+
+        .botao_sub:hover{ /*passar por cima do botão*/
+            background-color: #fff;
+            color:#008080;
+        }
+
+        section.sai{
+            background-color: #25474269;
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+            border-radius: 0px 5px 0px 5px;
+            border: 1px solid blanchedalmond;
+        }
+        h3{
+            border-bottom: 1px solid blanchedalmond;
+        }
+
+    </style>
+
+    <script>
+        function tabuada(){
+            var saida = document.getElementById('saida');
+            var n = Number(document.getElementById('fnumero').value); //ir buscar o number do formulário, cujo id é fnumero
+            var x;
+            let result;
+            resultado = document.querySelector('section#saida'); 
+            resultado.innerHTML="";
+            resultado.innerHTML = `<h3>Tabuada do ${n}:</h3>`
+
+            for (x = 1; x <= 10; x++){
+                result = n * x;               
+                resultado.innerHTML += `${n} * ${x} é igual a ${result}<br>`;
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>SUPER TABUADA</h1>
+    <h2>Escreva um número e de seguida eu escrevo a tabuada</h2>
+
+    <section id="entrada">
+        <form action="#" method="get">
+            <label for="fnumero">Introduza um número: </label>
+            <input type="number" min="1" max="10" value="1" name="numero" id="fnumero" onclick="tabuada()" placeholder="Número" autofocus>
+            <input type="submit" value="Tabuada" formaction="javascript:tabuada()" class="botao_sub">
+            <!--formaction para passar os dados através do botão submit do formulário-->
+        </form>
+    </section>
+    <br>
+    <section id="saida" class="sai">
+        <p>A tabuada vai aparecer aqui:</p>
+    </section>
+    
+</body>
+</html>

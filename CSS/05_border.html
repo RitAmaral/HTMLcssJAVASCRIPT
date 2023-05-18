@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Border</title>
+    
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        h1{
+            background-color:#b1ddeb;
+            padding:20px;
+            border:10px solid; /*aparece uma border a preto dentro da caixa*/
+        }
+        h2{
+            background-color:#67e7bd;
+            width:50%;
+            margin:20px; 
+            border:5px dotted #e67ce6; /*aparece uma border com bolas a roxo*/
+            /*height:300px; */ 
+        }
+        p{
+            background-color: #ffe4c4;
+            border: inset; /*aparece tipo uma caixa 3d*/
+        }
+        /* criar um novo estilo chamado destaque: */
+        .destaque{
+            background-color: #e78aa9b7;
+            color: #fff;
+            /*depois colocar em baixo class ="destaque"*/
+        }
+        .limites{
+            border:3px solid #5d73f3;
+            padding:10px 5px 1px 0px; /*criou margens diferentes nos 4 lados: 10 cima, 5 dir, 1 baixo, 0 esq*/
+        }
+        .limites2{
+            border:5px dashed #65f1656e;
+        }
+        .outline{ /*aparece uma border por fora da caixa*/
+            outline: 5px solid #000000;
+        }
+        .mistura{
+            border: 5px;
+            border-style: double solid dotted dashed; /*linha dupla cima, solida dir, bolas baixo, traço esq*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Box Model</h1>
+    <h2>Width e height</h2>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam.</p>
+    <p class ="destaque">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam.</p>
+    <p class="limites">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam.</p>
+    <!-- Podemos misturar CSS: -->
+    <p class="destaque limites">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam.</p>
+    <p class="limites2 outline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam.</p>
+    <p class="mistura">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam.</p>
+
+
+
+</body>
+</html>

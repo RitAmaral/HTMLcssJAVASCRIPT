@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Média dois números</title>
+    <style>
+        html{
+            background-color: snow;
+        }
+
+        button{
+            background-color: plum;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>Faz a média entre dois números vindos de um prompt</h1> <!--prompt=caixa de texto para input-->
+
+    <button ondblclick="clicarnome()">Clique 2 vezes para escrever o seu nome</button>
+
+    <p id="res">O seu nome vai aparecer aqui</p>
+
+    <button onclick="clicarmedia()"> Faz a média de dois números </button>
+
+    <p id="med">A média vai aparecer aqui</p>
+
+    <script>
+
+        function clicarnome(){
+            var nome = window.prompt('Qual o seu nome?');
+            var res = document.querySelector('p#res');
+
+            res.innerHTML=`Olá <b>${nome}</b>, bem-vindo/a à minha página!`;
+        }
+
+
+        function clicarmedia(){ 
+            var n3=Number(window.prompt('Digite o primeiro número: '));
+            var n4=Number(window.prompt('Digite o segundo número: '));
+
+            var media = (n3+n4) / 2;
+
+            med = document.querySelector('p#med');
+            med.innerHTML = (`<p> O primeiro número é: <b>${n3}</b></p>`);
+            med.innerHTML += (`<p> O segundo número é: <b>${n4}</b></p>`);
+            med.innerHTML += (`<p>A média é: <b>${media}</b></p>`);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+
+    <!-- o javascript pode ser declarado de duas formas: script ou script src="ficheiro_javascript.js" ... -->
+
+    <!-- <script src="ficheiro_javascript.js"></script> -->
+
+    <script>
+        //Comentários em javascript é como C#: // ou /* ....texto....*/
+        //para declarar variável, usar: var
+        var nome ="Curso Java Script"; //no javascript não é obrigatório ter ponto e virgula ";", mas é boa prática
+
+        /*------------Comando alert: escreve a mensagem nome (Curso Java Script) numa janelinha---------*/
+        alert(nome);
+
+        var n=10; //variável numérica
+
+        var n2=2 //valor fracionado em javascript é com ponto.
+
+        var entregou_doc = false; //variável do tipo true ou false
+
+        resultado = n+n2;
+
+        alert(resultado); //output: aparece um aviso com 12
+
+        // Definição de um array:
+        var marcas=['Renault', 'Toyota', 'Ford'];
+
+        // Para escrever com aspas dentro de uma frase, temos 2 formas:
+        //var frase='O curso "Javascript" é fixe';
+        var frase = "O curso \"Javascript\" é fixe";
+
+        /*----------------------OBJETOS----------------------*/
+        //Objeto é parecido com Classe
+
+        var objeto = new Object();
+
+        //Uma forma de declararmos objetos:
+        objeto.nome="Rita Amaral";
+        objeto.morada="Braga";
+
+        //Outra forma:
+        var carros = new Object();
+        carros={
+            marca:"Toyota",
+            modelo:"Corolla",
+            cilindrada:1800,
+        };
+
+        numero1 = 30;
+        var palavra = "Olá";
+        alert(numero1*palavra); //Output dá erro: NaN = Not a Number
+        alert(numero1+palavra); //Output: 30Olá -> faz concatenação
+
+        var cidade;
+        alert(cidade); //Output: undefined = variável não foi definida
+
+        var cidade = null;
+        alert(cidade); //Output: null
+
+        //Outra forma de declarar variáveis é usar o: let.
+        //A única diferença é que nem todos os browsers aceitam o let.
+        let idade=20;
+        alert(idade); //Output: 20
+
+        //Const = constante, se altero aqui, altero todas as const peso que aparecem ao longo do código (?)
+        const peso=30;
+        alert("Peso: " + peso); //Output: Peso: 30
+
+
+    </script>
+
+</head>
+<body>
+    <h1>Javascript - Introdução</h1>
+</body>
+</html>

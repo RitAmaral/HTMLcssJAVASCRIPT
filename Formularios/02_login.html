@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Login</title>
+    <link rel="stylesheet" href="estilo_login.css">
+</head>
+
+<body>
+    <h1>Dados de acesso</h1>
+
+    <form action="#" method="get"> <!--estamos a usar o get, mas é mais comum usar post-->
+        <fieldset>
+            <legend>Login</legend>
+            <label for="user">Utilizador</label>
+            <input type="text" id="user" required autofocus> <!--required=obriga a meter dados, autofocus=mete automaticamente o curso no campo utilizador neste caso-->
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" required>
+
+            <div class="actions">
+                <input type="submit" name="bt_enviar" value="Enviar" class="botao"> <!--envia os dados do formulário-->
+                <input type="reset" name="bt_limpar" value="Limpar" class="botao bt_limpar"> <!--limpa os dados do formulário-->
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+</html>

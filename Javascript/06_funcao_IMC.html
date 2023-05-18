@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Função IMC</title>
+</head>
+<body>
+    <h1>Função IMC</h1>
+    <script>
+
+        (function(){
+
+            function calculaIMC(peso, altura){ 
+                return peso / (altura*altura);
+                // Calcula o IMC só dentro da função. Retorna undefined
+                //var imc = peso / (altura*altura);
+                //console.log('O IMC é:', imc);
+            }
+
+            function classificacaoIMC(imc){ //o parametro que vem para a classificação vem de cima
+ 
+                if(imc<16){
+                    return('Muito abaixo do peso'); //usar console.log ou return
+                }
+                else if(imc<18){ //nota posso colocar apenas imc<18
+                    return('Abaixo do peso'); 
+                }
+                else if(imc<25){
+                    return('Normal'); 
+                }
+                else if(imc<28){
+                    return('Acima do peso'); 
+                }
+                else{  //não preciso de colocar else if imc>=28, basta colocar else
+                    return('Muito acima do peso');
+                } 
+                    
+            }
+
+            var imc = calculaIMC(88,1.70); 
+            console.log('O valor do IMC é', imc);
+
+            var classif = classificacaoIMC(imc);
+            console.log('A sua classificação é:', classif);
+
+            //2ª opção de apresentação - chamar função dentro de função
+            var classif = classificacaoIMC(calculaIMC(54,1.65));
+            console.log('2ª hipótese de apresentação. A sua classificação é: ',classif);
+
+        })();
+
+    </script>
+</body>
+</html>

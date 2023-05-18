@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Adivinha</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        html{
+            background-image: url(imagens/luck.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment: fixed; /*importante para a imagem cobrir sempre o ecra todo*/
+        }
+
+        h1{
+            border-bottom: 3px double #a11624;
+            width: fit-content;
+            margin: auto;
+            text-align: center;
+            text-shadow: 1px 1px 5px #000000;
+            color: #a11624;
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+        }
+
+        div{
+            background-color: #000000a4;
+            margin: auto;
+            width: fit-content;
+            padding: 10px;
+            border: 2px solid #a11624;
+            border-radius: 5px;
+            color: #E1CBC0;
+            text-align: center;
+        }
+        
+        mark{
+            background-color: #a11624;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        button{
+            background-color: #a11624;
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #E1CBC0;
+            color:#a11624;
+            border: 2px solid #a11624;
+        }
+
+    </style>
+
+</head>
+<body onload = "sorteia_numero()"> <!--ao fazer onload, a função sorteia_número funciona quando abrir a pág-->
+
+    <h1>Adivinha o número que eu pensei entre 1 e 100</h1>
+
+    <br>
+    <br>
+
+    <div>
+        <p>Já gerei o número. Começa a jogar</p>
+
+        <button onclick="jogar()">Jogar - Aposta num número</button>
+
+        <section id="result">
+            <p>Os seus palpites vão aparecer aqui: </p>
+        </section>
+    
+        <br>
+
+        <button onclick="jogar_while()">Jogar - Aposta num número while</button>
+
+    </div>
+    <script>
+        var aleatorio; //tenho que criar estas variáveis fora das funções para funcionarem depois dentro!
+        var palpite;
+        var clicar = 0;
+        var conta_maior = 0;
+        var conta_menor = 0;
+
+        function sorteia_numero(){
+            aleatorio = Math.trunc(Math.random()*100)+1; // random: gera um número aleatório; +1 para não sair o 0; trunc para só sair números inteiros.
+        }
+
+        function jogar(){
+            clicar++;
+            palpite = Number(window.prompt("Qual é o seu palpite?")); //Number força que eu só posso escrever um número.
+            let result = document.querySelector('section#result');
+
+            if (aleatorio == palpite) {
+                result.innerHTML += `<p>O seu palpite <b>(${palpite})</b> <mark>GANHOU!</mark></p>`;
+            }
+            else if (aleatorio > palpite) {
+                conta_menor++
+                result.innerHTML += `<p>O seu palpite <b>(${palpite})</b> é <mark>menor</mark> do que o número gerado. Tente novamente (não faça refresh na página!).</p>`;
+            }
+            else {
+                conta_maior++
+                result.innerHTML += `<p>O seu palpite <b>(${palpite})</b> é <mark>maior</mark> do que o número gerado. Tente novamente (não faça refresh na página!).</p>`;
+            } //os += são necessários para aparecer o histórico na página dos números escolhidos
+            result.innerHTML += `<p>Clicou <b>${clicar}</b> vezes. ${conta_menor} das vezes o número era menor, e ${conta_maior} das vezes o número era maior.</p>`;
+        }
+
+        function jogar_while(){ 
+            while (palpite != aleatorio){
+
+            clicar++;
+            palpite = Number(window.prompt("Qual é o seu palpite?")); 
+            let result = document.querySelector('section#result1');
+
+            if (aleatorio == palpite) {
+                result.innerHTML += `<p>O seu palpite <b>(${palpite})</b> <b><mark>GANHOU!</mark></b></p>`;
+            }
+            else if (aleatorio > palpite) {
+                conta_menor++
+                result.innerHTML += `<p>O seu palpite <b>(${palpite})</b> é <mark>menor</mark> do que o número gerado. Tente novamente (não faça refresh na página!).</p>`; 
+            }
+            else {
+                conta_maior++
+                result.innerHTML += `<p>O seu palpite <b>(${palpite})</b> é <mark>maior</mark> do que o número gerado. Tente novamente (não faça refresh na página!).</p>`;
+            } 
+            result.innerHTML += `<p>Clicou <b>${clicar}</b> vezes. ${conta_menor} das vezes o número era menor, e ${conta_maior} das vezes o número era maior.</p>`;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

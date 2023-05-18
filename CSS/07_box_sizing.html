@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Sizing</title>
+    
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        p{
+            width: 500px; /*se ao mudar o tamanho da pág, o conteúdo da pág ajusta, é pq usa %, se não é px*/
+            background-color: aliceblue;
+        }
+
+        .padding{
+            padding:25%; /*deixa 25% de margem em cada lado*/
+        }
+
+        .padding2{
+            padding:25%;
+            border: 10px solid #b6f1b6;
+        }
+        
+        .padding3{
+            padding: 25%;
+            border: 10px solid #68e668;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Box Sizing</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi quo molestias velit voluptatibus 
+        ad quibusdam sint modi magni. Provident ipsa eaque facere, sint nobis, sunt unde delectus quam natus, 
+        obcaecati eum aliquid veritatis. Consequatur molestiae, temporibus a inventore beatae culpa delectus, 
+        adipisci voluptates voluptate aspernatur perspiciatis quam maxime deserunt iusto optio molestias! Voluptas 
+        earum quo fugit excepturi optio aliquam ipsa suscipit ducimus nostrum iste veniam sapiente incidunt 
+        molestias possimus, impedit quaerat. Eius culpa sed unde, corporis magnam odio molestias harum voluptates 
+        doloribus quo reiciendis totam debitis officiis cum dolorem placeat? Sapiente, dicta dolores dolorum 
+        voluptate quidem neque ipsum? Obcaecati.</p>
+
+    <p class="padding">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi quo molestias velit voluptatibus 
+        ad quibusdam sint modi magni. Provident ipsa eaque facere, sint nobis, sunt unde delectus quam natus, 
+        obcaecati eum aliquid veritatis. Consequatur molestiae, temporibus a inventore beatae culpa delectus, 
+        adipisci voluptates voluptate aspernatur perspiciatis quam maxime deserunt iusto optio molestias! Voluptas 
+        earum quo fugit excepturi optio aliquam ipsa suscipit ducimus nostrum iste veniam sapiente incidunt 
+        molestias possimus, impedit quaerat. Eius culpa sed unde, corporis magnam odio molestias harum voluptates 
+        doloribus quo reiciendis totam debitis officiis cum dolorem placeat? Sapiente, dicta dolores dolorum 
+        voluptate quidem neque ipsum? Obcaecati.</p>
+
+    <p class="padding2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi quo molestias velit voluptatibus 
+        ad quibusdam sint modi magni. Provident ipsa eaque facere, sint nobis, sunt unde delectus quam natus, 
+        obcaecati eum aliquid veritatis. Consequatur molestiae, temporibus a inventore beatae culpa delectus, 
+        adipisci voluptates voluptate aspernatur perspiciatis quam maxime deserunt iusto optio molestias! Voluptas 
+        earum quo fugit excepturi optio aliquam ipsa suscipit ducimus nostrum iste veniam sapiente incidunt 
+        molestias possimus, impedit quaerat. Eius culpa sed unde, corporis magnam odio molestias harum voluptates 
+        doloribus quo reiciendis totam debitis officiis cum dolorem placeat? Sapiente, dicta dolores dolorum 
+        voluptate quidem neque ipsum? Obcaecati.</p>
+
+    <p class="padding3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi quo molestias velit voluptatibus 
+        ad quibusdam sint modi magni. Provident ipsa eaque facere, sint nobis, sunt unde delectus quam natus, 
+        obcaecati eum aliquid veritatis. Consequatur molestiae, temporibus a inventore beatae culpa delectus, 
+        adipisci voluptates voluptate aspernatur perspiciatis quam maxime deserunt iusto optio molestias! Voluptas 
+        earum quo fugit excepturi optio aliquam ipsa suscipit ducimus nostrum iste veniam sapiente incidunt 
+        molestias possimus, impedit quaerat. Eius culpa sed unde, corporis magnam odio molestias harum voluptates 
+        doloribus quo reiciendis totam debitis officiis cum dolorem placeat? Sapiente, dicta dolores dolorum 
+        voluptate quidem neque ipsum? Obcaecati.</p>
+
+
+
+
+</body>
+</html>

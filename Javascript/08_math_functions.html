@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo em HTML</title>
+</head>
+<body>
+    
+    <h1>Cálculos matemáticos em Javascript</h1>
+    <button onclick="calcular()">Número a calcular</button>
+
+    <section id="result">
+        <p>O resultado vai aparecer aqui</p>
+    </section>
+
+    <script>
+        function calcular(){
+            //podemos usar let como var
+            //Number converte o que vou escrever em número
+            let numero = Number(window.prompt('Digite um número:'));
+
+            let res = document.querySelector('section#result');
+            res.innerHTML = (`<p> O número que inseriu foi o ${numero}</p>`);
+            res.innerHTML += (`<p> O seu número absoluto é ${Math.abs(numero)}</p>`);
+            //math abs = vai transformar um número negativo(-5) num positivo(5).
+            res.innerHTML += (`<p> O seu número inteiro é ${Math.trunc(numero)}</p>`);
+            //math trunc = vai buscar a parte inteira (ou seja, se colocar 5.4, output é 5).
+            res.innerHTML += (`<p> A raíz quadrada é ${Math.sqrt(numero)}</p>`);
+            //math.sqrt = faz a raíz quadrada do nº, e cbrt faz a raíz cúbica
+            res.innerHTML += (`<p> A raíz cúbica é ${Math.cbrt(numero)}</p>`);
+            //math.pow = é a exponente, exemplo: 2^2 = 4.
+            res.innerHTML += (`<p> O número inteiro mais próximo é ${Math.round(numero)}</p>`);
+            //math round = nº inteiro mais próximo.
+            res.innerHTML += (`<p> O número ao quadrado é ${Math.pow(numero,2)}</p>`);
+            res.innerHTML += (`<p> O número ao cubo é ${Math.pow(numero,3)}</p>`);
+            res.innerHTML += (`<p> O número ${numero}<sup>2</sup> é ${Math.pow(numero,2)} </p>`);
+            res.innerHTML += (`<p> O número ${numero}<sup>3</sup> é ${Math.pow(numero,3)}</p>`);
+            //o sup põe um número acima (como expoente) do {número}
+            res.innerHTML += (`<p> Gera um número aleatório: ${Math.random()}</p>`);
+            res.innerHTML += (`<p> Gera um número aleatório entre 0 e 10: ${Math.random()*10}</p>`);
+            //*10 significa que vai gerar um número (não necessariamente inteiro) entre 0 e 10 /ex: 2.834128371
+            //para gerar um número inteiro, colocar dentro do Math.trunc:
+            res.innerHTML += (`<p> Gera um número aleatório inteiro entre 0 e 100: ${Math.trunc(Math.random()*100)}</p>`);
+
+        }
+    </script>
+
+</body>
+</html>

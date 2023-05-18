@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Datas</title>
+
+    <style>
+
+        html{
+            background-color: #87d6ab;
+            margin: 10px;
+        }
+
+        h1{
+            border-bottom: 2px solid #fff;
+            width:fit-content;
+            margin: auto;
+            color: #fff;
+        }
+
+        button{
+            padding: 5px;
+            background-color: #97acec;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #3b66e6;
+            color: #fff;
+            border-color: #000;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Datas</h1>
+    <br>
+
+    <button onclick="mostra_datas()">Clique para saber a data de hoje</button>
+    <!-- Nota: criamos o botão, mas claro que não é necessário criar um botão para aparecer a info que está dentro da function -->
+    <section id="result">
+
+        <p>Aqui vai aparecer a data atual</p>
+
+    </section>
+
+    <button onclick="data_nasc()">Clique aqui para inserir a sua data de nascimento</button>
+
+    <section id="datanasc">
+
+        <p>Aqui vai aparecer a data de nascimento</p>
+
+    </section>
+
+    <script>
+
+        var data_atual = new Date(); //Date tem de ser com letra maiúscula, e vai buscar a data do sistema
+        var res=document.querySelector('section#result');
+
+        function mostra_datas(){
+            //criar um vetor ou matriz (bi-dimensional) / array
+            var meses = new Array('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro');
+            var dias_semana = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado');
+
+            window.alert(meses[4]); //output = mai
+            
+            res.innerHTML = `<p>A data atual é <b>${data_atual}</b></p>`; //Output = Wed May 17 2023 10:26:40 GMT+0100 (Hora de verão da Europa Ocidental)
+            res.innerHTML += `<p>O dia da semana é <b>${data_atual.getDay()}</b></p>`;
+            //getDay() é um indice, logo: domingo é 0, segunda é 1, terça é 2, etc
+            res.innerHTML += `<p>O mês é <b>${data_atual.getMonth()}</b></p>`;
+            //janeiro é 0, feb é 1, março é 2, abril é 3, Maio é 4, etc
+            res.innerHTML += `<p>O dia do mês é <b>${data_atual.getDate()}</b></p>`;
+            //diz o dia atual, por exemplo, hoje é dia 17, logo aparece 17.
+            res.innerHTML += `<p>O ano é <b>${data_atual.getYear()}</b></p>`;
+            //aparece ano 123, porque conta a partir de 1900, por isso escrevemos a seguinte função:
+            res.innerHTML += `<p>O ano é <b>${data_atual.getFullYear()}</b></p>`;
+            //nesta função, já aparece o ano correto (2023)
+            res.innerHTML += `<p>A horas é <b>${data_atual.getHours()}</b></p>`;
+            //nesta função aparece a hora atual
+            res.innerHTML += `<p>Os minutos são <b>${data_atual.getMinutes()}</b></p>`;
+            //nesta função aparece os minutos atuais
+            res.innerHTML += `<p>Os segundos são <b>${data_atual.getSeconds()}</b></p>`;
+            //nesta função aparece os segundos
+            res.innerHTML += `<p>A hora completa é <b>${data_atual.getHours()}:${data_atual.getMinutes()}:${data_atual.getSeconds()}</b></p>`;
+            //aparece a hora completa exemplo: 11:14:34
+
+            //Usar o array que criei em cima:
+            res.innerHTML += `<p>O mês por extenso é <b>${meses[data_atual.getMonth()]}</b></p>`;
+            res.innerHTML += `<p>O dia da semana por extenso é <b>${dias_semana[data_atual.getDay()]}</b></p>`;
+        }
+
+        function data_nasc(){
+            var data_nasc = new Date(window.prompt('Qual é a tua data de nascimento?'));
+            var datanasc = document.querySelector('section#datanasc');
+
+            var dias_semana1 = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado');
+            //tenho de criar novo array, pq o outro está dentro de outra função
+            datanasc.innerHTML = `<p>A data é <b>${data_nasc}</b></p>` //aqui tem de ser igual, em baixo +=
+            datanasc.innerHTML += `<p>O dia da semana por extenso é <b>${dias_semana1[data_nasc.getDay()]}</b></p>`;
+        }
+
+
+    </script>
+
+</body>
+</html>

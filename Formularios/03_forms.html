@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos de formulário</title>
+    <link rel="stylesheet" href="03_forms_estilo.css">
+    <link rel="icon" type="image/x-icon" href="\CSS\imagens\pcicon.png">
+</head>
+<body>
+
+    <h1>Objetos de formulário</h1>
+    <br>
+    <form action="#" autocomplete="off"> <!--autocomplete=off: desaparece as sugestões enquanto escrevemos-->
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" maxlength="50" id="nome" placeholder="Escreva o seu nome" autofocus> <!--maxlength=só posso meter o nº de caracteres que escrever-->
+            <br>
+            <br>
+            <img src="persondataicon.png" alt="É um icone" class="img1"> <!--inserção de um icone-->
+
+            <label for="email">Email:</label>
+            <input type="email" maxlength="50" placeholder="Digite um email válido" id="email"> <!--placeholder:aparece o texto "Digite um ..." no campo-->
+            <br>
+            <br>
+
+            <label for="agregado">Agregado familiar:</label>
+            <input type="number" min="0" max="10" id="agregado" value="1"> <!--min e max limitam os números que podes colocar; value=aparece um valor predefinido, neste caso 1-->
+            <br>
+            <br>
+
+            <label for="data">Data de nascimento:</label>
+            <input type="date" min="1990-01-01" max="2023-05-08" id="data">
+            <br>
+            <br>
+
+            Possui algum rendimento extra?
+            <label> <!--este label permite que a pessoa carregue no sim, e não só na bolinha, o que pode ser complicado as pessoas-->
+            <input type="radio" name="atividade" value="s">Sim <!--name liga as duas perguntas se tiverem o mesmo name, por isso posso selecionar uma opção-->
+            </label>
+            <!--<label>--> <!--se não tiver label como no caso do "não" (está comentado), preciso de clicar na bolinha-->
+            <input type="radio" name="atividade" value="n">Não <!--temos de colocar value, porque é o que vai para as bases de dados, se não colocarmos não passa nada-->
+            <!--</label>-->
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Áreas de interesse</legend>
+
+            <label>
+            <input type="checkbox" name="interesse" value="html">HTML <!--input tipo checkbox permite selecionar várias opções-->
+            </label>
+            <label>
+            <input type="checkbox" name="interesse" value="css">CSS
+            </label>
+            <label>
+            <input type="checkbox" name="interesse" value="javascript">JAVASCRIPT
+            </label>
+
+            <br>
+            <br>
+
+            <label>Escolha uma linguagem:
+                <br>
+                <select name="linguagem" id="" size="8" multiple> <!--mais usado para listas; se size=8, a lista aparece no máx com 8 opções; multiple=posso selecionar várias opções (com ctrl)-->
+                    <optgroup label="Frontend"> <!--optgroup = grupo de opções-->
+                        <option value="html">html</option>
+                        <option value="css">css</option>
+                        <option value="javascript">javascript</option>
+                    </optgroup>
+
+                    <optgroup label="Backend">
+                        <option value="java">java</option>
+                        <option value="phyton">phyton</option>
+                    </optgroup>
+                </select>
+
+                <input type="text" list="lista" placeholder="Escolha uma linguagem"> <!--este obriga a escolher apenas uma opção-->
+                    <datalist id="lista">
+                        <option value="html"></option>
+                        <option value="css"></option>
+                        <option value="javascript"></option>
+                        <option value="java"></option>
+                        <option value="phyton"></option>
+                    </datalist>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend> <!--cols = colunas, rows = linhas, maxlenght=max de caracteres-->
+            <textarea name="msg" id="" cols="60" rows="10" maxlength="300" placeholder="Escreva aqui a sua opinião"></textarea>
+            <br>
+            <br>
+
+            <!--readonly não nos deixa escrever, é só para ler; se não tiver readonly, podemos escrever na caixa-->
+            <textarea cols="60" rows="10" readonly class="contrato">
+Contrato de utilização
+    Regra 1
+    Regra 2
+            </textarea>
+            <br>
+            <br>
+            <img src="signcont.png" alt="É um icone" class="img2">
+            <label> 
+            <input type="checkbox">Li e aceito o contrato.
+            </label>
+            <br>
+            <br>
+            <input type="file"> <!--mete um botão para eu escolher um ficheiro para anexar-->
+
+            <input type="hidden" value="Texto escondido"> <!--isto nós não conseguimos ver, está escondido-->
+
+        </fieldset>
+
+        <br>
+        <input type="submit" class="botao_sub"> <!--submete formulário-->
+        <input type="reset" class="botao_res"> <!--limpa formulário-->
+
+        <input type="button" value="Ok" class="botao_ok"></button><!--este botão não tem nada haver com o formulário-->
+
+        <button type="submit" class="botao_sub"> <b><i>Enviar</i></b></button>
+        <button type="reset" class="botao_res"> <b><i>Repor</i></b></button>
+        <button type="button" class="botao_ok"> <b><i>Ok</i></b></button>
+        <br>
+        <br>
+        Pesquisa: 
+        <input type="search" placeholder="Escreve o que procuras"> <!--é como se fosse uma caixa pra colocar texto para procurar-->
+        <br>
+        <br>
+
+        <input type="range" min="0" max="10" step="1"> <!--é tipo um cursor, do genero aumenta e diminui volume-->
+        <!--step=1, quer dizer que aumentamos e diminuimos 1 em 1-->
+        <br>
+        <br>
+
+        Relógio: <input type="time"> <!--põe um relógio-->
+        <br>
+        <br>
+
+        Cores: <input type="color"> <!--aparece um botão onde tem as cores-->
+
+    </form>
+
+    <br>
+    <h1>Mais Objetos</h1>
+    <br>
+    
+        <fieldset class="fd2">
+            <h4>Meter 1 </h4>
+            <meter min="0" max="100" low="30" high="70" value="70"> 
+            <!--aparece um meter, se o low for 30 e high 70, e o value=45, aparece verde, se tiver fora do intervalo, aparece a amarelo-->
+            </meter>
+
+            <h4>Meter 2</h4>
+            <!--se tiver um optimum=100, valores a baixo de 30(low) ficam vermelhos, e valores acime de 70 ficam verdes-->
+            <meter min="0" max="100" low="30" high="70" value="29" optimum="100"></meter>
+            <br>
+            <br>
+
+            <label> <h4>% de objetivo</h4></label> <!--podemos colocar 70% à frente, pq alguns browsers não entendem a barra progress, e por isso, nesse caso, aparece o 70%-->
+            <progress max="100" value="70">70%</progress>
+            <br>
+            <br>
+
+            <!-------------Primeira abordagem ao javascript:---------->
+            <!----------Isto faz um cálculo de 2 variáveis (a, b)------->
+            <h4>Resultado</h4>
+            <form oninput="resultado.value=a.value*b.value"class="form2">
+                <input type="number" name="a" id="a"> *
+                <input type="number" name="b" id="b"> =
+
+                <output name="resultado" for="a b"></output>
+            </form> 
+
+        </fieldset>
+
+    <footer>
+        <h6>Criado por: Ana Rita Amaral</h6>
+    </footer>
+
+</body>
+</html>

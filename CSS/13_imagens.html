@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhar com imagens</title>
+    <!-- Colocar um icon ao lado do titulo -->
+    <link rel="icon" type="image/x-icon" href="imagens/pcicon.png">
+    <style>
+        h1{
+            background-color: #ffa60054;
+            color: lightskyblue;
+            text-align: center;
+        }
+        
+        body{
+            font-family: sans-serif;
+            width: 700px;
+            margin: auto;
+            background-image: url(imagens/bg.jpg);
+            background-repeat: no-repeat; /*para a imagem não repetir quando acabar: no-repeat*/
+            /*se colocar repeat-x, a imagem repete-se apenas na horizontal*/
+            /*background-size: 200px 500px; 1º largura, 2º altura*/
+            background-attachment: fixed; /*a imagem é fixa, mesmo fazendo scroll*/
+            background-position: right bottom; /*a imagem está fixa a partir da parte de baixo*/
+            background-size: cover; /*importante: a imagem fica fixa e ajustada ao ecrã, ñ é preciso colocar outros backgrounds positions etc*/
+            /*background: url(imagens/tile-pattern.png) cornflowerblue no-repeat;*/ /*outra forma de escrever, e que sobrepõe tudo o que escrevi em cima/*
+            
+        }
+        p{
+            line-height: 2; /*muda a altura entre linhas*/
+        }
+
+        .img_logo{
+            width:150px;
+        }
+
+        .logo_html{
+            float: left;
+        }
+
+        .logo_css{
+            float: right;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Trabalhar com imagens</h1>
+
+    <h2>Diferença entre bitmap/jpg/png e Vetor (svg)</h2>
+
+    <img src="imagens/chat.png" alt="Imagem png" class="img_logo"> <!--perde qualidade se aumentarmos o tamanho com width="150px"-->
+    <img src="imagens/chat.svg" alt="Imagem svg" class="img_logo"> <!--ficheiro svg não perde qualidade-->
+
+    <br>
+
+    <img src="imagens/html5.png" alt="Imagem HTML5" class="logo_html">
+    
+    <p> Ipsum dolor sit amet consectetur adipisicing elit. Unde, aut aperiam dolore est temporibus 
+    sit neque rerum consectetur aliquam doloribus atque asperiores et placeat earum quam quibusdam 
+    aspernatur laudantium omnis laborum magnam eaque vitae, animi ab ut? Ipsum nesciunt quis officia. 
+    Accusamus odit adipisci dicta, fuga odio mollitia, quaerat placeat excepturi animi id eaque aspernatur, 
+    dolore dolorum nam numquam dolor. Consequatur nam in laudantium optio ipsa voluptatibus, enim saepe 
+    quam vitae facilis. Praesentium, amet illum perferendis aliquam nisi, ut sit ipsum quidem architecto 
+    eos recusandae quisquam, inventore corporis. Architecto vero, magni doloribus labore nobis doloremque 
+    atque saepe quo dolores id. </p>
+
+    <img src="imagens/css3.png" alt="Imagem CSS3" class="logo_css">
+
+    <p> Ipsum dolor sit amet consectetur adipisicing elit. Unde, aut aperiam dolore est temporibus 
+    sit neque rerum consectetur aliquam doloribus atque asperiores et placeat earum quam quibusdam 
+    aspernatur laudantium omnis laborum magnam eaque vitae, animi ab ut? Ipsum nesciunt quis officia. 
+    Accusamus odit adipisci dicta, fuga odio mollitia, quaerat placeat excepturi animi id eaque aspernatur, 
+    dolore dolorum nam numquam dolor. Consequatur nam in laudantium optio ipsa voluptatibus, enim saepe 
+    quam vitae facilis. Praesentium, amet illum perferendis aliquam nisi, ut sit ipsum quidem architecto 
+    eos recusandae quisquam, inventore corporis. Architecto vero, magni doloribus labore nobis doloremque 
+    atque saepe quo dolores id. </p>
+
+    <p> Ipsum dolor sit amet consectetur adipisicing elit. Unde, aut aperiam dolore est temporibus 
+    sit neque rerum consectetur aliquam doloribus atque asperiores et placeat earum quam quibusdam 
+    aspernatur laudantium omnis laborum magnam eaque vitae, animi ab ut? Ipsum nesciunt quis officia. 
+    Accusamus odit adipisci dicta, fuga odio mollitia, quaerat placeat excepturi animi id eaque aspernatur, 
+    dolore dolorum nam numquam dolor. Consequatur nam in laudantium optio ipsa voluptatibus, enim saepe 
+    quam vitae facilis. Praesentium, amet illum perferendis aliquam nisi, ut sit ipsum quidem architecto 
+    eos recusandae quisquam, inventore corporis. Architecto vero, magni doloribus labore nobis doloremque 
+    atque saepe quo dolores id. </p>
+
+    <p> Ipsum dolor sit amet consectetur adipisicing elit. Unde, aut aperiam dolore est temporibus 
+    sit neque rerum consectetur aliquam doloribus atque asperiores et placeat earum quam quibusdam 
+    aspernatur laudantium omnis laborum magnam eaque vitae, animi ab ut? Ipsum nesciunt quis officia. 
+    Accusamus odit adipisci dicta, fuga odio mollitia, quaerat placeat excepturi animi id eaque aspernatur, 
+    dolore dolorum nam numquam dolor. Consequatur nam in laudantium optio ipsa voluptatibus, enim saepe 
+    quam vitae facilis. Praesentium, amet illum perferendis aliquam nisi, ut sit ipsum quidem architecto 
+    eos recusandae quisquam, inventore corporis. Architecto vero, magni doloribus labore nobis doloremque 
+    atque saepe quo dolores id. </p>
+
+    <p> Ipsum dolor sit amet consectetur adipisicing elit. Unde, aut aperiam dolore est temporibus 
+    sit neque rerum consectetur aliquam doloribus atque asperiores et placeat earum quam quibusdam 
+    aspernatur laudantium omnis laborum magnam eaque vitae, animi ab ut? Ipsum nesciunt quis officia. 
+    Accusamus odit adipisci dicta, fuga odio mollitia, quaerat placeat excepturi animi id eaque aspernatur, 
+    dolore dolorum nam numquam dolor. Consequatur nam in laudantium optio ipsa voluptatibus, enim saepe 
+    quam vitae facilis. Praesentium, amet illum perferendis aliquam nisi, ut sit ipsum quidem architecto 
+    eos recusandae quisquam, inventore corporis. Architecto vero, magni doloribus labore nobis doloremque 
+    atque saepe quo dolores id. </p>
+    
+    
+</body>
+</html>

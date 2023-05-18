@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários em HTML</h1>
+
+    <!-- form = formulários, method pode ser get ou post -->
+    <!-- get: a informação aparece no link; post: a info não aparece no link, é o que se usa nos logins -->
+    <!-- action = quando carregas em submeter, vai fazer uma search na página do google -->
+    <form action="https://www.google.com/search" method="get">
+        <label for="procura">Digite o que quer procurar</label>
+        <input  type="text" name="q" id="procura"> <!--coloca uma caixa onde podemos escrever texto, e vinculamos a label ao input com id=procura; o "q" é uma variável que o google usa quando procuramos alguma coisa-->
+        <input type="submit" value="Procurar"> <!--submit cria um botão para submeter o que foi escrito na caixa de texto em cima, value é o texto do botão-->
+
+    </form>
+
+</body>
+</html>

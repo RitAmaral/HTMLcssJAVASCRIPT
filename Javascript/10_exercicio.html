@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+
+    <style>
+        html{
+            background-color: lightblue;
+            margin: 10px;
+            font-family: sans-serif;
+        }
+
+        h1{
+            color: yellow;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+            width: fit-content;
+            padding: 10px;
+            text-transform: uppercase;
+            margin:auto;
+        }
+
+        button{
+            border-radius: 5px;
+            padding: 5px;
+            background-color:lightpink;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #ff7489;
+        }
+
+        .resultado{
+            background-color: lightpink;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 0px 5px 0px 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Exercício</h1>
+    <p>Carrega no botão, insere 2 números. Na página vão surgir 2 números e de seguida o maior deles.</p>
+
+    <button onclick="Numeros()">Clica aqui para escrever os números</button>
+
+    <p id="num1">O primeiro número vai aparecer aqui</p>
+
+    <p id="num2">O segundo número vai aparecer aqui</p>
+
+    <p id="maior" class="resultado">O maior número vai aparecer aqui</p>
+    
+    <script>
+
+        function Numeros() {
+            var numero1 = window.prompt('Escreve o primeiro número');
+            var res1 = document.querySelector('p#num1');
+            res1.innerHTML = `Este é o primeiro número: <mark>${numero1}</mark>`;
+
+            var numero2 = window.prompt('Escreve o segundo número');
+            var res2 = document.querySelector('p#num2');
+            res2.innerHTML = `Este é o segundo número: <mark>${numero2}</mark>`;
+
+            if (numero1>numero2){
+                var res3 = document.querySelector('p#maior');
+                res3.innerHTML = `O primeiro número, <b><mark>${numero1}</mark></b>, é maior que o segundo número, <mark>${numero2}</mark>`;
+            }
+            else {
+                var res4 = document.querySelector('p#maior');
+                res4.innerHTML = `O segundo número, <b><mark>${numero2}</mark></b>, é maior que o primeiro número, <mark>${numero1}</mark>`; 
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

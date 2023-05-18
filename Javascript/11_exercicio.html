@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício</title>
+
+    <style>
+        html{
+            background-color: lightblue;
+            margin: 10px;
+            font-family: sans-serif;
+        }
+
+        h1{
+            color: yellow;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+            width: fit-content;
+            padding: 10px;
+            text-transform: uppercase;
+            margin:auto;
+        }
+
+        button{
+            border-radius: 5px;
+            padding: 5px;
+            background-color:lightpink;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #ff7489;
+        }
+
+        .resultado{
+            background-color: lightpink;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 0px 5px 0px 5px;
+            border: 2px solid #000;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Exercício</h1>
+    <p>Carrega no botão, insere um número. Na página deverá surgir se o número é par ou ímpar.</p>
+    <p>Em javascript, para saber se um número é par utiliza-se o código: <b>(número % 2 == 0)</b>.</p>
+
+    <button onclick="Numeros()">Clica aqui para escrever um número</button>
+
+    <p id="res1">O número vai aparecer aqui</p>
+
+    <p id="res2" class="resultado">O resultado vai aparecer aqui</p>
+
+    
+    <script>
+
+        function Numeros() {
+            var numero1 = window.prompt('Insere um número');
+            var res1 = document.querySelector('p#res1');
+            res1.innerHTML = `O número inserido é: <mark>${numero1}</mark>`;
+
+            if (numero1 % 2 == 0){
+                var res2 = document.querySelector('p#res2');
+                res2.innerHTML = `O número <b><mark>${numero1}</mark></b> é <b>par</b>!`;
+            }
+            else {
+                var res2 = document.querySelector('p#res2');
+                res2.innerHTML = `O número <b>${numero1}</b> é <mark><b>ímpar</b></mark>!`; 
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

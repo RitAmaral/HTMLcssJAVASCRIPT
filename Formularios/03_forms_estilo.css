@@ -1,0 +1,144 @@
+/*---------------Design da página 03_forms--------------*/
+
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(galaxy.jpg);
+    color: #000000;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    align-items: center;
+}
+
+/*---------Design do header 1--------*/
+h1{
+    background-color: #ffcde6;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+    font-size: 3em;
+    text-align: center;
+    color:#000;
+}
+
+/*---------Design do primeiro formulário----------*/
+form{
+    width: 650px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px double #000000;
+    box-shadow: 3px 3px 10px #000000;
+    color: #ffffff;
+    background-color: #a7dbfdb9;
+}
+
+/*---------Design do form input do resultado--------*/
+.form2{
+    border: 1px solid #000;
+    background-color: #1D2733;
+    width: 450px;
+}
+
+/*--------Fieldsets dentro do primeiro formulário----------*/
+fieldset{
+    border: 1px solid #1D2733;
+    border-radius: 0px 20px 0px 20px;
+    font-size: 14px;
+    margin: 10px;
+    padding: 14px;
+    background-color: #1d2733c2;
+}
+
+/*-----------Fieldset do fundo da página--------*/
+.fd2{ 
+    border: 3px double #000000;
+    border-radius: 0px 0px 40px 40px;
+    font-size: 14px;
+    margin: 10px;
+    padding: 14px;
+    background-image: linear-gradient(to bottom, #a7dbfdb9, #ffffffc4);
+    width: fit-content;
+    font-weight: bold;
+}
+
+/*------Design dos títulos de cada fieldset do formulário------*/
+legend{
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+    border: 1px solid #1D2733;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:#ffcde6;
+}
+
+/*---------Design do campo onde aparece o contrato/readonly-------*/
+.contrato{
+    background-color: #BCD3E3;
+}
+
+/*---------Design dos icones--------*/
+.img1{
+    width: 100px;
+    float: right;
+}
+
+.img2{
+    width: 90px;
+    float: right;
+}
+
+/*-----------Design do h6 ou do footer da página (criado por...)------------*/
+h6{
+    color: #000000;
+    border: 1px solid #000;
+    border-radius: 0px 10px 0px 10px;
+    width: fit-content;
+    background-color: #ffcde6c0;
+    padding: 5px;
+    font-size: 0.6em;
+}
+
+/*-------Focus: para colocar uma cor diferente na caixa selecionada------*/
+:focus{
+    background-color: #ffcde6;
+}
+
+/*-----------------Design dos botões------------*/
+/*-----------Nota: hover é quando passamos com o rato em cima do botão--------*/
+.botao_sub{
+    background-color: #ffcde6;
+    cursor: pointer;
+}
+
+.botao_sub:hover{
+    background-color: #44b4ffb9;
+    cursor: pointer;
+}
+
+.botao_res{
+    background-color: #ff80c0;
+    cursor: pointer;
+}
+
+.botao_res:hover{
+    background-color: #ffffffd0;
+    cursor: pointer;
+}
+
+.botao_ok{
+    background-color: #fc45a1;
+    cursor: pointer;
+}
+
+.botao_ok:hover{
+    background-color: #1D2733;
+    color:#ffffff;
+    cursor: pointer;
+}

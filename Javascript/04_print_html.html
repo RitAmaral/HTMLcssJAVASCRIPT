@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Prompt - Trabalhar com dados</title>
+
+    <style>
+        body{
+            font: 12pt arial;
+            background-color: antiquewhite;
+            width: auto;
+            text-align: center;
+        }
+
+        button{
+            font-size: 12pt;
+            padding: 25px;
+            background-color: #f08080be;
+            border: 3px double black;
+        }
+
+        .corMorada{
+            background-color: #7fffd4d2;
+        }
+
+        .corIdade{
+            background-color: #3df3f3d5;
+        }
+        
+        .corGenero{
+            background-color: #b868d8c4;
+        }
+
+        h1{
+            border-bottom: 3px solid black;
+        }
+
+        .cxTxt{
+            background-color: #dbf350af;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Prompt - Trabalhar com dados - Escrever na folha HTML </h1>
+
+    <button onclick="clicar()">Clique aqui para inserir nome</button>
+
+    <section id="resultado"> <!--id=resultado vai ligar em baixo-->
+        <p>Aqui vai aparecer o nome</p>
+    </section>
+
+    <script>
+        function clicar(){
+            var nome = window.prompt('Qual o seu nome?');
+            var res = window.document.getElementById('resultado');
+
+            res.innerHTML=`Olá <b>${nome}</b>, bem-vindo/a à minha página!`;
+        }
+    </script>
+    <br>
+
+    <button ondblclick="clicar2x()" class="corMorada">Duplo clique para inserir a morada</button>
+    <section id="resultado2">
+        <p>Aqui vai aparecer a morada</p>
+    </section>
+
+    <script>
+        function clicar2x(){
+            var morada = window.prompt('Qual a sua morada?');
+            var res = window.document.getElementById('resultado2');
+
+            res.innerHTML=`A sua morada é: <b>${morada}</b>!`;
+        }
+    </script>
+    <br>
+
+    <button onmouseover="PassarPorCima()" class="corIdade">Passa o rato por cima para inserir a idade</button>
+    <section id="resultado3">
+        <p>Aqui vai aparecer a idade</p>
+    </section>
+
+    <script>
+        function PassarPorCima(){
+            var idade = window.prompt('Qual a sua idade?');
+            var res = window.document.getElementById('resultado3');
+
+            res.innerHTML=`A sua idade é: <b>${idade}</b>!`;
+        }
+    </script>
+    <br>
+
+    <button onkeydown="EscreveTecla()" class="corGenero">Carrega numa tecla</button>
+    <section id="resultado4">
+        <p>Aqui vai aparecer o género</p>
+    </section>
+
+    <script>
+        function EscreveTecla(){
+            var genero = window.prompt('Qual o seu género?');
+            var res = window.document.getElementById('resultado4');
+
+            res.innerHTML=`O seu género é: <b>${genero}</b>!`;
+        }
+    </script>
+    <br>
+
+    <input type = "text" onkeypress ="escreve()" class="cxTxt">
+    <script>
+        function escreve(){
+            alert('Olá')
+        }
+    </script>
+    <br>
+
+</body>
+</html>
